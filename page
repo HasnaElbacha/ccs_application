@@ -1,0 +1,48 @@
+from tkinter import *
+from PIL import ImageTk ,Image
+window = Tk()
+
+window.title("Welcome to LikeGeeks app")
+
+window.geometry('800x550')
+
+
+
+
+
+
+btn_flechem=Image.open('.\\col.png')
+resize_btn_flechem = btn_flechem.resize((800,550))
+photo_flechem=ImageTk.PhotoImage(resize_btn_flechem)
+bg_image=Label(window,image=photo_flechem ).place(x=0,y=0)
+
+
+
+ping = Image.open('.\\AS.png')
+resize_ping = ping.resize((100,100))
+ping=ImageTk.PhotoImage(resize_ping)
+button=Button(window,image=ping,bg='white',activebackground='white',cursor='hand2',bd=0)
+button.place(x=0,y=0,height=100,width=800)
+
+
+#lbl = Label(window, text="Hello")
+lbl=Label(text="carte ethernet",font=("Goudy old style",15,"bold"),fg="#ffffff",bg="#677179").place(x=10,y=100)
+#text.grid(column=2, row=2)
+
+passT=Label(text="Email",font=("Goudy old style",15,"bold"),fg="WHITE",bg="#677179").place(x=40,y=250)
+txt_email=Entry(font=("times new roman",12),bg="lightgray")
+txt_email.place(x=46,y=280,width=350,height=35)
+
+text = Entry(window,width=20)
+
+text.grid(column=20, row=20)
+
+def clicked():
+
+    lbl.configure(text="Button was clicked !!")
+
+btn = Button(window, text="enter", command=clicked)
+
+btn.grid(column=50, row=50)
+
+window.mainloop()

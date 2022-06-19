@@ -1,0 +1,102 @@
+from time import time
+from tkinter import*
+from PIL import ImageTk ,Image
+import random
+import time
+root=Tk()
+root.title("C.C.S")
+root.state("zoomed")
+root.geometry("800x550")
+root.config(background="#357ab7")
+root.config(background="#ffffff")
+
+btn_flechem=Image.open('.\\3.png')
+resize_btn_flechem = btn_flechem.resize((1367,120))
+photo_flechem=ImageTk.PhotoImage(resize_btn_flechem)
+bg_image=Label(root,image=photo_flechem,bd=0 ).place(x=0,y=1)
+
+ACC=Button(root,text="                     Acceuil                     ",bg="#002FA7",fg="#ffffff",bd=0,font=("times new roman",18)).place(x=0,y=120)
+pin=Button(root,text="                         Ping                        ",bg="#002FA7",fg="#ffffff",bd=0,font=("times new roman",18)).place(x=342,y=120)
+par=Button(root,text="                      Parametre                     ",bg="#318CE7",fg="#ffffff",bd=0,font=("times new roman",18)).place(x=695,y=120)
+sta=Button(root,text="                   Statistique               ",bg="#002FA7",fg="#ffffff",bd=0,font=("times new roman",18)).place(x=1060,y=120)
+
+# frame_login=Frame(root,bg="#318CE7")
+# frame_login.place(x=60,y=210,height=450,width=1250)
+
+tit=Label(text="Testez-vous votre connexion réseau",font=("Impact",25,"bold"),fg="#22780F",bg="white").place(x=475,y=180)
+# Des=Label(text="Choissez-vous le périphérique que vous voulez tester",font=("Goudy old style",20,"bold"),fg="#22780F",bg="white").place(x=510,y=230)
+
+btn_f=Image.open('.\\1.png')
+resize_btn_f = btn_f.resize((200,400))
+photo_f=ImageTk.PhotoImage(resize_btn_f)
+bg_image=Label(root,image=photo_f,bd=0 ).place(x=1160,y=300)
+
+# CARTE=Label(text=" Carte ethernet ",font=("italic",15,"bold"),fg="#000000",bg="Gray").place(x=100,y=400)
+# ROUTER=Label(text="        Router      ",font=("italic",15,"bold"),fg="#000000",bg="gray").place(x=100,y=460)
+# SERVER=Label(text="   Local server  ",font=("italic",15,"bold"),fg="#000000",bg="gray").place(x=100,y=520)
+# HOTE=Label(text="         Hote        ",font=("italic",15,"bold"),fg="#000000",bg="gray").place(x=100,y=580)
+CART=Label(root,text="Carte ethernet",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=40,y=300)
+txt_CART1=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_CART1.place(x=120,y=300,width=50,height=30)
+CARTA=Label(root,text=".",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=170,y=300)
+txt_CART2=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_CART2.place(x=183,y=300,width=50,height=30)
+CARTB=Label(root,text=".",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=233,y=300)
+txt_CART3=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_CART3.place(x=246,y=370,width=50,height=30)
+CARTC=Label(root,text=".",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=296,y=370)
+txt_CART4=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_CART4.place(x=310,y=370,width=50,height=30)
+
+
+ROU=Label(root,text="Routeur",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=40,y=370)
+txt_ROU1=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_ROU1.place(x=120,y=370,width=50,height=30)
+ROUA=Label(root,text=".",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=170,y=370)
+txt_ROU2=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_ROU2.place(x=183,y=370,width=50,height=30)
+ROUB=Label(root,text=".",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=233,y=370)
+txt_ROU3=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_ROU3.place(x=246,y=300,width=50,height=30)
+ROUC=Label(root,text=".",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=296,y=300)
+txt_ROU4=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_ROU4.place(x=310,y=300,width=50,height=30)
+
+
+SER=Label(root,text="Serveur local",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=40,y=440)
+txt_SER1=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_SER1.place(x=120,y=440,width=50,height=30)
+SERA=Label(root,text=".",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=170,y=440)
+txt_SER2=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_SER2.place(x=183,y=440,width=50,height=30)
+SERB=Label(root,text=".",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=233,y=440)
+txt_SER3=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_SER3.place(x=246,y=440,width=50,height=30)
+SERC=Label(root,text=".",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=296,y=440)
+txt_SER4=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_SER4.place(x=310,y=440,width=50,height=30)
+
+
+HOT=Label(root,text="hote",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=40,y=510)
+txt_HOT1=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_HOT1.place(x=120,y=510,width=50,height=30)
+HOTA=Label(root,text=".",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=170,y=510)
+txt_HOT2=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_HOT2.place(x=183,y=510,width=50,height=30)
+HOTB=Label(root,text=".",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=233,y=510)
+txt_HOT3=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_HOT3.place(x=246,y=510,width=50,height=30)
+HOTC=Label(root,text=".",font=("Goudy old style",15,"bold"),fg="black",bg="white").place(x=296,y=510)
+txt_HOT4=Entry(root,font=("times new roman",12),bg="lightgray")
+txt_HOT4.place(x=310,y=510,width=50,height=30)
+def info_ping():
+ lines = [str(txt_CART1.get())+'.'+str(txt_CART2.get())+'.'+str(txt_CART3.get())+'.'+str(txt_CART4.get()),
+  str(txt_ROU1.get())+'.'+str(txt_ROU2.get())+'.'+str(txt_ROU3.get())+'.'+str(txt_ROU4.get()),
+  str(txt_SER1.get())+'.'+str(txt_SER2.get())+'.'+str(txt_SER3.get())+'.'+str(txt_SER4.get()),
+  str(txt_HOT1.get())+'.'+str(txt_HOT2.get())+'.'+str(txt_HOT3.get())+'.'+str(txt_HOT4.get())]
+ with open('info_ping.txt', 'w+') as f:
+    for line in lines:
+        f.write(line)
+        f.write('\n')
+button2=Button(root,text="Reset" ,bg='#040405',fg='#3488FF', border=1,width=15,height=1,font=('yu gothic ui',15,'bold'),command=info_ping).place(x=700,y=550)
+root.mainloop()

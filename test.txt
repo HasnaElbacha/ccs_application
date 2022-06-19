@@ -1,0 +1,9 @@
+
+Envoi d'une requˆte 'Ping'  192.168.1.18 avec 32 octets de donn‚esÿ:
+R‚ponse de 192.168.1.1ÿ: Impossible de joindre l'h“te de destination.
+R‚ponse de 192.168.1.1ÿ: Impossible de joindre l'h“te de destination.
+R‚ponse de 192.168.1.1ÿ: Impossible de joindre l'h“te de destination.
+R‚ponse de 192.168.1.1ÿ: Impossible de joindre l'h“te de destination.
+
+Statistiques Ping pour 192.168.1.18:
+    Paquetsÿ: envoy‚s = 4, re‡us = 4, perdus = 0 (perte 0%),
