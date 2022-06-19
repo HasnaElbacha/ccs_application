@@ -8,6 +8,9 @@ import random
 import Connexion
 import PAGE1
 import time
+import home
+import ping1
+import parametre
 def modifier(results):
    root=Tk()
    root.title("C.C.S")
@@ -28,11 +31,22 @@ def modifier(results):
    ping=ImageTk.PhotoImage(resize_ping)
    button=Button(image=ping,bg='white',activebackground='white',cursor='hand2',command=dec)
    button.place(x=1260,y=10,height=100,width=100)
-
-   ACC=Button(root,text="                     Acceuil                     ",bg="#002FA7",fg="#ffffff",bd=0,font=("times new roman",18)).place(x=0,y=120)
-   pin=Button(root,text="                         Ping                        ",bg="#002FA7",fg="#ffffff",bd=0,font=("times new roman",18)).place(x=342,y=120)
-   par=Button(root,text="            Parametre des adresses                     ",bg="#002FA7",fg="#ffffff",bd=0,font=("times new roman",18)).place(x=695,y=120)
-   sta=Button(root,text="                 Mon compte               ",bg="#318CE7",fg="#ffffff",bd=0,font=("times new roman",18)).place(x=1060,y=120)
+   def pass_home():
+      root.destroy()
+      home.acc(results)
+   def pass_ping():
+       root.destroy()
+       ping1.ping(results)
+   def pass_para():
+      root.destroy()
+      parametre.parametre(results)
+   def pass_compte():
+       root.destroy()
+       PAGE1.compte(results)
+   ACC=Button(root,text="                     Acceuil                     ",bg="#002FA7",fg="#ffffff",bd=0,font=("times new roman",18),command=pass_home).place(x=0,y=120)
+   pin=Button(root,text="                         Ping                        ",bg="#002FA7",fg="#ffffff",bd=0,font=("times new roman",18),command=pass_ping).place(x=342,y=120)
+   par=Button(root,text="            Parametre des adresses                     ",bg="#002FA7",fg="#ffffff",bd=0,font=("times new roman",18),command=pass_para).place(x=695,y=120)
+   sta=Button(root,text="                 Mon compte               ",bg="#318CE7",fg="#ffffff",bd=0,font=("times new roman",18),command=pass_compte).place(x=1060,y=120)
 
 # frame_login=Frame(root,bg="#318CE7")
 # frame_login.place(x=60,y=210,height=450,width=1250)
